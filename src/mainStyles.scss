@@ -1,0 +1,83 @@
+@import url("./roboto/roboto.css");
+@import "./_variables";
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+    [dir="rtl"] & {
+        direction: rtl;
+    }
+}
+
+label {
+    display: block;
+}
+input[type="text"] {
+    border: 1px solid $secondary-color;
+    outline: none;
+    height: 36px;
+    border-radius: $border-radius;
+    padding: 0 10px;
+    &:focus {
+        border-color: $primary-color;
+    }
+}
+
+input[type="submit"] {
+    margin-block: 12px;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 14px;
+    padding: 1rem;
+    background-color: $primary-color;
+    transition: ease-in-out 0.3s;
+    color: white;
+    font-weight: 500;
+    font-size: 18px !important;
+    outline: none;
+    &:focus-visible {
+        background-color: $primary-color-dark;
+    }
+    &:hover {
+        background-color: $primary-color-dark;
+        cursor: pointer;
+    }
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+    outline: none;
+    &:hover {
+        color: $primary-color-dark;
+    }
+    &:focus-visible {
+        color: $primary-color-dark;
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+// ex: To restart the login process || To continue the login process message page
+.instruction {
+    span {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+        margin-inline-end: 0.5rem;
+    }
+}
+.MuiTouchRipple-root {
+    > span {
+        color: $primary-color;
+    }
+}

@@ -1,0 +1,110 @@
+import type { PageProps } from "keycloakify/login/pages/PageProps";
+import type { KcContext } from "../../kcContext";
+import type { I18n } from "../../i18n";
+import styles from "./LoginOtp.module.scss";
+//@ts-ignore
+import OTPInput from "otp-input-react";
+import { useState } from "react";
+
+export default function LoginOtp(
+    props: PageProps<Extract<KcContext, { pageId: "login-otp.ftl" }>, I18n>
+) {
+    const [otp, setOtp] = useState("");
+
+    const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
+
+    const { url } = kcContext;
+
+    const { msg, msgStr } = i18n;
+
+    //@ts-ignore
+    const handleSubmit = async (e) => {
+        const form = document.getElementById("kc-otp-login-form");
+
+        const otpInput = document.createElement("input");
+
+        otpInput.type = "hidden";
+        otpInput.name = "otp";
+        otpInput.value = otp;
+        form?.appendChild(otpInput);
+    };
+
+    return (
+        <>
+            <Template
+                {...{ kcContext, i18n, doUseDefaultCss, classes }}
+                headerNode={msg("doLogIn")}
+            >
+                <form
+                    id="kc-otp-login-form"
+                    className={styles["form"]}
+                    action={url.loginAction}
+                    method="post"
+                    onSubmit={handleSubmit}
+                >
+                    {/* {otpLogin.userOtpCredentials.length > 1 && (
+                        <div>
+                            <div>
+                                {otpLogin.userOtpCredentials.map(
+                                    (otpCredential, index) => (
+                                        <div key={otpCredential.id}>
+                                            <input
+                                                id={`kc-otp-credential-${index}`}
+                                                name="selectedCredentialId"
+                                                type="radio"
+                                                value={otpCredential.id}
+                                                style={{ display: "none" }}
+                                            />
+                                            <label
+                                                htmlFor={`kc-otp-credential-${index}`}
+                                                key={otpCredential.id}
+                                            >
+                                                <div>
+                                                    <span />
+                                                    <h2>
+                                                        {
+                                                            otpCredential.userLabel
+                                                        }
+                                                    </h2>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    )
+                                )}
+                            </div>
+                        </div>
+                    )} */}
+                    <div className={styles["input-container"]}>
+                        <div>
+                            <label htmlFor="otp">
+                                {msg("loginOtpOneTime")}
+                            </label>
+                        </div>
+
+                        <div>
+                            <OTPInput
+                                className={styles["otp-inputs-container"]}
+                                value={otp}
+                                // @ts-ignore
+                                onChange={(e) => setOtp(e)}
+                                autoFocus
+                                OTPLength={6}
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="kc-form-buttons">
+                            <input
+                                name="login"
+                                id="kc-login"
+                                type="submit"
+                                value={msgStr("doLogIn")}
+                            />
+                        </div>
+                    </div>
+                </form>
+            </Template>
+        </>
+    );
+}

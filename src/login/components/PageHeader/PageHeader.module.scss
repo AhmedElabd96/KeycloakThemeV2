@@ -1,0 +1,41 @@
+@import "../../../_variables";
+
+.back-link {
+    background-color: $secondary-color-light;
+    border: none;
+    border-radius: $border-radius;
+    padding: 0.8rem 1rem;
+    font-size: 15px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    i {
+        margin-inline-end: 0.5rem;
+        [dir=rtl] & {
+            transform: rotate(180deg);
+        }
+    }
+    
+}
+.container {
+    margin-top: 32px;
+    width: 80% !important;
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .logo-container {
+            margin-bottom: 12px;
+            .login-text {
+                text-align: center;
+                color: $gray-900;
+            }
+            > div {
+                margin-block: 1rem;
+            }
+            & > img {
+                width: 180px;
+                height: 80px;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import '../../../_variables';
+.form {
+    .input-container {
+        margin-block: 48px;
+        label {
+            margin-bottom: 8px;
+            color: $label-color;
+        }
+        .otp-inputs-container {
+            justify-content: space-between;
+            gap: 0.5rem;
+            input {
+                flex-grow: 1;
+                height: 50px !important;
+                aspect-ratio: 1/1;
+                font-size: 16px !important;
+                margin-right: 0 !important;
+            }
+        }
+        .otp-input {
+            padding: 0 !important;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .form {
+        width: 40vw;
+        margin-inline: auto;
+    }
+}
+@media (max-width: 750px) {
+    .form {
+        width: 60vw;
+    }
+}
+@media (max-width: 450px) {
+    .form {
+        width: 80vw;
+    }
+}

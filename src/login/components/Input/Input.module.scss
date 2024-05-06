@@ -1,0 +1,43 @@
+@import '../../../_variables';
+.user-password {
+	border: 1px solid $secondary-color;
+	border-radius: $border-radius;
+    padding-inline-start: 20px;
+    margin-top: 8px;
+	input {
+		width: 100%;
+		height: 36px;
+		border: none;
+		outline: 0;
+		padding: 0 10px;
+		border-radius: $border-radius;
+		outline: 0;
+		box-shadow: none;
+		margin-bottom: 0 !important;
+	
+	}
+
+	position: relative;
+
+	i,
+	img {
+		position: absolute;
+		transform: translate(0, -50%);
+		cursor: pointer;
+		font-size: 18px;
+		top: 17px;
+	}
+	i {
+		inset-inline-end: 8px;
+	}
+	img {
+		inset-inline-start: 8px;
+	}
+
+	.eye-shine {
+		color: $primary-color;
+	}
+}
+.user-password.focused {
+    border-color: $primary-color;
+}
