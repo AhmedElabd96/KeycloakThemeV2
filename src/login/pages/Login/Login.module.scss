@@ -13,8 +13,6 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 1rem;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
     .remember-me {
         display: flex;
         align-items: center;
@@ -22,6 +20,7 @@
         margin-bottom: 0;
         color: $label-color;
         gap: 8px;
+        margin-bottom: 8px;
       
         span {
             &:not(:first-child) {
@@ -35,7 +34,7 @@
 }
 
 .register {
-    margin-top: 12px;
+    margin-top: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
