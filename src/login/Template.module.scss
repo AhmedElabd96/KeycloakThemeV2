@@ -7,8 +7,12 @@
     }
     .page-header {
         color: $primary-color;
-        font-weight: 500;
+        font-weight: 700;
         font-size: 24px;
+        margin: 0;
+    }
+    .page-header.indiv {
+        margin-bottom: 60px;
     }
     .content {
         display: flex;

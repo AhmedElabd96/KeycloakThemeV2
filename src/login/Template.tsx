@@ -110,7 +110,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                         ) : (
                             <h1
                                 id="kc-page-title"
-                                className={styles["page-header"]}
+                                className={`${styles["page-header"]} ${realm?.name !== 'publicfans' && styles['indiv']}`}
                             >
                                 {headerNode}
                             </h1>
