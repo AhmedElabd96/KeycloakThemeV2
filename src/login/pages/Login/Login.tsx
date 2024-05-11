@@ -25,7 +25,7 @@ export default function Login(
         usernameHidden,
         login,
         auth,
-        registrationDisabled,
+        properties,
     } = kcContext;
 
     const { msg, msgStr } = i18n;
@@ -58,11 +58,7 @@ export default function Login(
     return (
         <Template
             {...{ kcContext, i18n, doUseDefaultCss, classes }}
-            displayInfo={
-                realm.password &&
-                realm.registrationAllowed &&
-                !registrationDisabled
-            }
+            displayInfo={true}
             //@ts-ignore
             social={social}
             displayWide={realm.password && social.providers !== undefined}
@@ -70,7 +66,7 @@ export default function Login(
             infoNode={
                 <div id="kc-registration" className={styles["register"]}>
                     <span>{msg("noAccount")}</span>
-                    <a tabIndex={6} href={url.registrationUrl}>
+                    <a tabIndex={6} href={`${properties.BASE_URL}/register`}>
                         {msg("doRegister")}
                     </a>
                 </div>
