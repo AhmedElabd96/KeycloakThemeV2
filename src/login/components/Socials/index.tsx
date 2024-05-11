@@ -9,33 +9,26 @@ interface SocialsProps {
     socialProviders?: any[];
 }
 
-
-
 const Socials = ({ msg, socialProviders = [] }: SocialsProps) => (
     <div className={styles["container"]}>
         <p>{msg("signInUsing")}</p>
         <ul className={styles["providers"]}>
             {socialProviders?.map((p) => (
-                <li key={p.providerId}>
+                <li
+                    key={p.providerId}
+                    onClick={() => window.open(p.loginUrl, "_self")}
+                >
                     {p?.displayName?.toLowerCase() === "google" && (
-                        <a href={p.loginUrl}>
-                            <img src={googleIcon} />
-                        </a>
+                        <img src={googleIcon} />
                     )}
                     {p?.displayName?.toLowerCase() === "linkedin" && (
-                        <a href={p.loginUrl}>
-                            <img src={linkedinIcon} />
-                        </a>
+                        <img src={linkedinIcon} />
                     )}
                     {p?.displayName?.toLowerCase() === "facebook" && (
-                        <a href={p.loginUrl}>
-                            <img src={facebookIcon} />
-                        </a>
+                        <img src={facebookIcon} />
                     )}
                     {p?.displayName?.toLowerCase() === "github" && (
-                        <a href={p.loginUrl}>
-                            <img src={githubIcon} />
-                        </a>
+                        <img src={githubIcon} />
                     )}
                 </li>
             ))}
