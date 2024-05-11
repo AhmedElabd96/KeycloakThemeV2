@@ -16,7 +16,7 @@ export default defineConfig({
       themeName: "PAdmin-fgic",
       // See: https://docs.keycloakify.dev/environnement-variables
       extraThemeProperties: [
-        "MY_ENV_VARIABLE=${env.MY_ENV_VARIABLE:}"
+        "BASE_URL=${env.BASE_URL}"
       ],
       // This is a hook that will be called after the build is done
       // but before the jar is created.  
