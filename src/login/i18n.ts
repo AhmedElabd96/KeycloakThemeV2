@@ -16,7 +16,7 @@ export const { useI18n } = createUseI18n({
         regisNow: "Register Now",
         loginUAE: "Log in with UAE Pass",
         loginOrg: "Log in with Organization Account",
-        noAccount: "Don't have an account ?",
+        noAccount: "Don't have an account?",
         loginTo: "Log in to",
         passwordAlert:
             "Password must have at least 8 characters that contain numeric, uppercase, lowercase and symbol",
@@ -34,7 +34,7 @@ export const { useI18n } = createUseI18n({
         regisNow: "سجل الان",
         loginUAE: "قم بتسجيل الدخول باستخدام بطاقة الهوية الإماراتية",
         loginOrg: "تسجيل الدخول باستخدام حساب المنظمة",
-        noAccount: "ليس لديك حساب ؟",
+        noAccount: "ليس لديك حساب؟",
         loginTo: "تسجيل الدخول إلى",
         passwordAlert:
             "يجب أن تحتوي كلمة المرور على 8 أحرف على الأقل تحتوي على أرقام وأحرف كبيرة وصغيرة ورمز",
