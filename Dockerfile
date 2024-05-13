@@ -25,7 +25,6 @@ FROM quay.io/keycloak/keycloak:23.0.3
 
 COPY --from=builder /opt/keycloak /opt/keycloak/
 
-ENV BASE_URL=http://devstable.eastus.cloudapp.azure.com:8083/penta-app-admin-fgic
 ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=admin
 
