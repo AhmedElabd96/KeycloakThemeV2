@@ -42,38 +42,6 @@ export default function LoginOtp(
                     method="post"
                     onSubmit={handleSubmit}
                 >
-                    {/* {otpLogin.userOtpCredentials.length > 1 && (
-                        <div>
-                            <div>
-                                {otpLogin.userOtpCredentials.map(
-                                    (otpCredential, index) => (
-                                        <div key={otpCredential.id}>
-                                            <input
-                                                id={`kc-otp-credential-${index}`}
-                                                name="selectedCredentialId"
-                                                type="radio"
-                                                value={otpCredential.id}
-                                                style={{ display: "none" }}
-                                            />
-                                            <label
-                                                htmlFor={`kc-otp-credential-${index}`}
-                                                key={otpCredential.id}
-                                            >
-                                                <div>
-                                                    <span />
-                                                    <h2>
-                                                        {
-                                                            otpCredential.userLabel
-                                                        }
-                                                    </h2>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    )
-                                )}
-                            </div>
-                        </div>
-                    )} */}
                     <div className={styles["input-container"]}>
                         <div>
                             <label htmlFor="otp">

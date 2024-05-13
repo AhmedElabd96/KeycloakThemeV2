@@ -3,4 +3,24 @@
     label {
         margin-bottom: 8px;
     }
+    .error-text {
+        color: red;
+        margin-top: 8px;
+        display: inline-block;
+    }
+}
+
+.otp-inputs-container {
+    justify-content: space-between;
+    gap: 0.5rem;
+    input {
+        flex-grow: 1;
+        height: 50px !important;
+        aspect-ratio: 1/1;
+        font-size: 16px !important;
+        margin-right: 0 !important;
+    }
+}
+.otp-input {
+    padding: 0 !important;
 }
