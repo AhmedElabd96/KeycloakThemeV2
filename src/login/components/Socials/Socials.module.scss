@@ -4,7 +4,7 @@
     content: "";
     background-color: #c6c6c6;
     height: 1px;
-    width: 25%;
+    width: 45%;
     position: absolute;
 }
 
@@ -16,6 +16,7 @@
         margin-bottom: 0;
         color: $gray-900;
         font-size: 15px;
+        margin-top: 12px;
     }
     .providers {
         list-style: none;
@@ -24,6 +25,7 @@
         align-items: center;
         gap: 1rem;
         padding: 0;
+        margin-bottom: 18px;
         li {
             border: 1px solid $secondary-color;
             border-radius: $border-radius;
@@ -45,16 +47,16 @@
         font-size: 16px;
         color: #c6c6c6;
         width: 100%;
-        margin-bottom: 1rem;
+        margin-bottom: 24px;
         &::before {
             @include divider;
-            left: 20%;
+            left: 0;
             top: 50%;
         }
 
         &::after {
             @include divider;
-            right: 20%;
+            right: 0;
             top: 50%;
         }
     }
