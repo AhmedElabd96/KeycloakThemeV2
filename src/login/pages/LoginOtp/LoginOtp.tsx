@@ -5,13 +5,12 @@ import styles from "./LoginOtp.module.scss";
 //@ts-ignore
 import OTPInput from "otp-input-react";
 import { useState } from "react";
-
 export default function LoginOtp(
     props: PageProps<Extract<KcContext, { pageId: "login-otp.ftl" }>, I18n>
 ) {
     const [otp, setOtp] = useState("");
-
-    const { kcContext, i18n, doUseDefaultCss, Template, classes } = props;
+    // @ts-ignore
+    const { kcContext, i18n, doUseDefaultCss, Template, classes, totp } = props;
 
     const { url } = kcContext;
 
@@ -56,7 +55,7 @@ export default function LoginOtp(
                                 // @ts-ignore
                                 onChange={(e) => setOtp(e)}
                                 autoFocus
-                                OTPLength={6}
+                                OTPLength={totp?.policy?.digits}
                             />
                         </div>
                     </div>

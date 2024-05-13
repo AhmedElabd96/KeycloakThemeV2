@@ -128,7 +128,7 @@ export default function LoginConfigTotp(
                     )}
                     <li>
                         <p>{msg("loginTotpStep3")}</p>
-                        <p>{msg("loginTotpStep3DeviceName")}</p>
+                        {/* <p>{msg("loginTotpStep3DeviceName")}</p> */}
                     </li>
                 </ol>
 
@@ -151,7 +151,7 @@ export default function LoginConfigTotp(
                                 // @ts-ignore
                                 onChange={(e) => setTotpVal(e)}
                                 autoFocus
-                                OTPLength={6}
+                                OTPLength={totp.policy.digits}
                             />
 
                             {messagesPerField.existsError("totp") && (
