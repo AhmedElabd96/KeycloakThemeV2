@@ -25,7 +25,7 @@ export default function Login(
         usernameHidden,
         login,
         auth,
-        properties,
+        client,
     } = kcContext;
 
     const { msg, msgStr } = i18n;
@@ -66,7 +66,8 @@ export default function Login(
             infoNode={
                 <div id="kc-registration" className={styles["register"]}>
                     <span>{msg("noAccount")}</span>
-                    <a tabIndex={6} href={`${properties.BASE_URL}/register`}>
+                    {/* @ts-ignore */}
+                    <a tabIndex={6} href={`${client?.baseUrl}/register`}>
                         {msg("doRegister")}
                     </a>
                 </div>
