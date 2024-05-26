@@ -151,7 +151,7 @@ export default function LoginConfigTotp(
                                 // @ts-ignore
                                 onChange={(e) => setTotpVal(e)}
                                 autoFocus
-                                OTPLength={totp.policy.digits}
+                                OTPLength={6}
                             />
 
                             {messagesPerField.existsError("totp") && (

@@ -55,7 +55,7 @@ export default function LoginOtp(
                                 // @ts-ignore
                                 onChange={(e) => setOtp(e)}
                                 autoFocus
-                                OTPLength={totp?.policy?.digits}
+                                OTPLength={6}
                             />
                         </div>
                     </div>
