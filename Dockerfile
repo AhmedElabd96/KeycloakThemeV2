@@ -18,7 +18,7 @@ FROM quay.io/keycloak/keycloak:23.0.3 AS builder
 WORKDIR /opt/keycloak
 
 COPY --from=keycloakify_jar_builder /opt/app/dist_keycloak/target/PAdmin-fgic-keycloak-theme-6.1.7.jar /opt/keycloak/providers/
-COPY --from=keycloakify_jar_builder /opt/app/dist_keycloak/src/main/resources/theme/PAdmin-fgic /opt/keycloak/themes/
+COPY --from=keycloakify_jar_builder /opt/app/dist_keycloak/src/main/resources/theme/PAdmin-fgic /opt/keycloak/themes/FGIC_Final
 
 RUN /opt/keycloak/bin/kc.sh build
 
