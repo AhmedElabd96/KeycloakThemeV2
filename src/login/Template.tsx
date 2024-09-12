@@ -7,7 +7,7 @@ import { useGetClassName } from "keycloakify/login/lib/useGetClassName";
 import type { KcContext } from "./kcContext";
 import type { I18n } from "./i18n";
 // import backgroundImage from "./assets/background.png";
-import backgroundImage from "./assets/sign-bg.png";
+import backgroundImage from "./assets/banner.jpg";
 import styles from "./Template.module.scss";
 import PageHeader from "./components/PageHeader/index";
 import UAEPassButton from "./components/UAEPassButton";

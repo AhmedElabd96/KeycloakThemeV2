@@ -1,7 +1,6 @@
 import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../../kcContext";
 import type { I18n } from "../../i18n";
-import userIcon from "../../assets/userIcon.svg";
 import Input from "../../components/Input";
 import styles from "./LoginResetPassword.module.scss";
 export default function LoginResetPassword(

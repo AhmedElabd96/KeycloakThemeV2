@@ -6,7 +6,7 @@ interface InputProps {
 	name: string;
 	id?: string;
 	label?: string;
-	placeholder?: string | Element | undefined;
+	placeholder?: string ;
 	readOnly?: boolean;
 	tabIndex?: number;
 	isUsername?: boolean;

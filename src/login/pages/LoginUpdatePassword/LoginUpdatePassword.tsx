@@ -2,7 +2,6 @@ import type { PageProps } from "keycloakify/login/pages/PageProps";
 import type { KcContext } from "../../kcContext";
 import type { I18n } from "../../i18n";
 import Input from "../../components/Input";
-import passwordIcon from "../../assets/passwordIcon.svg";
 import styles from "./LoginUpdatePassword.module.scss";
 import { Tooltip, Typography } from "@mui/material";
 import { Help } from "@mui/icons-material";
