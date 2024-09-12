@@ -40,11 +40,12 @@ export default function LoginResetPassword(
                     </div>
                     <div>
                         <Input
-                            icon={userIcon}
+                            icon={null}
                             isUsername={true}
                             id="username"
                             name="username"
                             autoFocus={true}
+                            placeholder={msgStr("forgetUser-placeholder")}
                             defaultValue={
                                 auth !== undefined && auth.showUsername
                                     ? auth.attemptedUsername

@@ -83,7 +83,7 @@ export default function LoginUpdatePassword(
                             name="password-new"
                             autoFocus={true}
                             autoComplete="new-password"
-                            icon={passwordIcon}
+                            icon={null}
                         />
                     </div>
                 </div>
@@ -100,7 +100,7 @@ export default function LoginUpdatePassword(
                             id="password-confirm"
                             name="password-confirm"
                             autoComplete="new-password"
-                            icon={passwordIcon}
+                            icon={null}
                         />
                     </div>
                 </div>

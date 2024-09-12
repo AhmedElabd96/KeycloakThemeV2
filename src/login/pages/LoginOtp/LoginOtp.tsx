@@ -66,7 +66,7 @@ export default function LoginOtp(
                                 name="login"
                                 id="kc-login"
                                 type="submit"
-                                value={msgStr("doLogIn")}
+                                value={msgStr("doLogInSubmit")}
                             />
                         </div>
                     </div>

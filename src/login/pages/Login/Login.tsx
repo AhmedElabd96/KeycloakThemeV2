@@ -6,11 +6,10 @@ import type { I18n } from "../../i18n";
 import styles from "./Login.module.scss";
 import { Checkbox } from "@mui/material";
 import checkBoxIcon from "../../assets/checkbox.svg";
+import arrow from "./Vector.svg";
 import { ReactSVG } from "react-svg";
 import Socials from "../../components/Socials";
 import Input from "../../components/Input";
-import userIcon from "../../assets/userIcon.svg";
-import passwordIcon from "../../assets/passwordIcon.svg";
 
 export default function Login(
     props: PageProps<Extract<KcContext, { pageId: "login.ftl" }>, I18n>
@@ -95,8 +94,8 @@ export default function Login(
                                             !realm.loginWithEmailAllowed
                                                 ? "username"
                                                 : realm.registrationEmailAsUsername
-                                                  ? "email"
-                                                  : "usernameOrEmail";
+                                                    ? "email"
+                                                    : "usernameOrEmail";
 
                                         const autoCompleteHelper: typeof label =
                                             label === "usernameOrEmail"
@@ -121,7 +120,8 @@ export default function Login(
                                                     isUsername={true}
                                                     autoFocus={true}
                                                     autoComplete="off"
-                                                    icon={userIcon}
+                                                    icon={null}
+                                                    placeholder={msgStr("user-placeholder")}
                                                 />
                                             </>
                                         );
@@ -137,7 +137,8 @@ export default function Login(
                                     name="password"
                                     isUsername={false}
                                     autoComplete="off"
-                                    icon={passwordIcon}
+                                    icon={null}
+                                    placeholder={msgStr("password-placeholder")}
                                 />
                             </div>
                             <div className={styles["actions"]}>
@@ -174,7 +175,7 @@ export default function Login(
                                                         <ReactSVG
                                                             className={
                                                                 styles[
-                                                                    "checkboxCustomIcon"
+                                                                "checkboxCustomIcon"
                                                                 ]
                                                             }
                                                             src={checkBoxIcon}
@@ -189,11 +190,11 @@ export default function Login(
                                                             color: "#eb6d3b",
                                                         },
                                                     }}
-                                                    // {...(login.rememberMe === "on"
-                                                    // 	? {
-                                                    // 			defaultChecked: true,
-                                                    // 	  }
-                                                    // 	: {})}
+                                                // {...(login.rememberMe === "on"
+                                                // 	? {
+                                                // 			defaultChecked: true,
+                                                // 	  }
+                                                // 	: {})}
                                                 />
                                                 {msg("rememberMe")}
                                             </label>
@@ -208,6 +209,7 @@ export default function Login(
                                                 href={
                                                     url.loginResetCredentialsUrl
                                                 }
+                                                style={{ fontSize: "12px" , color:"black" }}
                                             >
                                                 {msg("doForgotPassword")}
                                             </a>
@@ -215,25 +217,28 @@ export default function Login(
                                     )}
                                 </div>
                             </div>
-                            <div id="kc-form-buttons">
+                            <div id="kc-form-buttons" className={styles['kc-form-buttons']}>
                                 <input
                                     type="hidden"
                                     id="id-hidden-input"
                                     name="credentialId"
                                     {...(auth?.selectedCredential !== undefined
                                         ? {
-                                              value: auth.selectedCredential,
-                                          }
+                                            value: auth.selectedCredential,
+                                        }
                                         : {})}
                                 />
-                                <input
+                                <button
                                     tabIndex={5}
                                     name="login"
                                     id="kc-login"
                                     type="submit"
-                                    value={msgStr("doLogIn")}
                                     disabled={isLoginButtonDisabled}
-                                />
+                                >
+                                    <span>{msgStr("doLogInSubmit")}</span>
+                                    <ReactSVG src={arrow}  />
+                                </button>
+
                             </div>
                         </form>
                     )}

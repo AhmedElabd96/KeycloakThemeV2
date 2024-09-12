@@ -7,8 +7,8 @@ export const { getKcContext } = createGetKcContext<KcContextExtension>({
         {
             pageId: "login.ftl",
             realm: {
-                name: "publicfans",
-                // displayName: 'fouad'
+                name: "fgic",
+                displayName: 'fgic'
             },
             // message: {type: 'success', summary: 'Please specify username or email.'},
             social: {

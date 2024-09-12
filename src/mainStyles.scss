@@ -17,13 +17,19 @@ label {
     display: block;
 }
 input[type="text"] {
-    border: 1px solid $secondary-color;
+    border: 1px solid transparent;
     outline: none;
     height: 36px;
     border-radius: $border-radius;
     padding: 0 10px;
-    &:focus {
-        border-color: $primary-color;
+    
+    &::placeholder{
+        color: #80808099;
+    }
+}
+input[type="password"]{
+    &::placeholder{
+        color: #80808099;
     }
 }
 
@@ -39,6 +45,32 @@ input[type="submit"] {
     font-weight: 500;
     font-size: 18px !important;
     outline: none;
+    &:focus-visible {
+        background-color: $primary-color-dark;
+    }
+    &:hover {
+        background-color: $primary-color-dark;
+        cursor: pointer;
+    }
+}
+
+button[type="submit"] {
+    margin-block: 12px;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 14px;
+    padding: 1rem;
+    background-color: $primary-color;
+    transition: ease-in-out 0.3s;
+    color: white;
+    font-weight: 500;
+    font-size: 18px !important;
+    outline: none;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    box-shadow: 0px 30px 30px -18px #E5593629;
     &:focus-visible {
         background-color: $primary-color-dark;
     }

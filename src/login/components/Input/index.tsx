@@ -6,7 +6,7 @@ interface InputProps {
 	name: string;
 	id?: string;
 	label?: string;
-	placeholder?: string;
+	placeholder?: string | Element | undefined;
 	readOnly?: boolean;
 	tabIndex?: number;
 	isUsername?: boolean;
@@ -51,7 +51,7 @@ export default React.memo(
 						isFocused && styles["focused"]
 					}`}
 				>
-					<img src={icon} />
+					{icon && <img src={icon} />}
 					<input
 						ref={inputRef}
 						onFocus={onFocusHandler}

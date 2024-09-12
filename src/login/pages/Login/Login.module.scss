@@ -5,7 +5,7 @@
     margin-bottom: 24px;
     label {
         color: $label-color;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -25,7 +25,7 @@
       
         span {
             &:not(:first-child) {
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 400;
             }
     
@@ -37,12 +37,16 @@
 .register {
     margin-top: 4px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 4px;
-    > span {
-        color: $gray-900;
+    span {
+        font-size: 14px;
     }
+
+}
+.kc-form-buttons{
+    margin-top: 2rem;
 }
 
 .checkboxCustomIcon {
