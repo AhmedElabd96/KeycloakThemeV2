@@ -46,19 +46,19 @@ export const { getKcContext } = createGetKcContext<KcContextExtension>({
                 ],
             },
             locale: {
-                currentLanguageTag: "en",
+                currentLanguageTag: "ar",
             },
         },
         {
             pageId: "login-reset-password.ftl",
             locale: {
-                currentLanguageTag: "en",
+                currentLanguageTag: "ar",
             },
         },
         {
             pageId: "login-update-password.ftl",
             locale: {
-                currentLanguageTag: "en",
+                currentLanguageTag: "ar",
             },
         },
         {
